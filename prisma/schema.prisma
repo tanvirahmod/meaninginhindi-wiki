@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model dictionary_table{
+  id Int @id @default(autoincrement())
+  word String @unique
+  meaning String
+  view Int
+  meaningPronounce String
+  mainMeaningExtraWords String
+  extraMeanings String
+  partsOfSpeech String
+  formNoun String
+  formAdjective String
+  formVerb String
+  formAdverb String
+  examples String
+  phoneticUS String
+  phoneticUK String
+  synonyms String
+  antonyms String
+  hypernyms String
+  hyponyms String
+  nextWord String
+  prevWord String
+
+  @@index(fields: [word])
+} // migrate to create table by typing : npx prisma migrate dev 
+// then install prisma studio to control database on the browser by typing : npx prisma studio

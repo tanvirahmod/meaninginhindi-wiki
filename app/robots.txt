@@ -1,0 +1,7 @@
+User-agent: Googlebot
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /logout/
+
+Sitemap: https://meaninginhindi.wiki/sitemap.xml
