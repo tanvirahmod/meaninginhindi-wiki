@@ -17,14 +17,14 @@ export async function generateMetadata(
 ): Promise<Metadata> {
 
     return {
-        title: `Übersetzung für '${params.word}' von Englisch nach Deutsch | German translation/meaning of '${params.word}'`,
-        description: `Here you will get the translation of the word '${params.word}' as well as an explanation of its meaning. Hopefully, you will find what you are looking for.`,
+        title: `${params.word.replaceAll("-", " ").replace(params.word[0],params.word[0].toUpperCase())} Meaning in Hindi (${params.word.replaceAll("-", " ").replace(params.word[0],params.word[0].toUpperCase())} का हिन्दी अनुवाद) | meaninginhindi.wiki`,
+        description: `Meaning of ${params.word.replaceAll("-", " ").replace(params.word[0],params.word[0].toUpperCase())} in Hindi or Translation of ${params.word.replaceAll("-", " ").replace(params.word[0],params.word[0].toUpperCase())} in Hindi is given here. Read this full page to know more about this English word ${params.word.replaceAll("-", " ").replace(params.word[0],params.word[0].toUpperCase())} in Hindi langulage.`,
         alternates: {
             canonical: `https://meaninginhindi.wiki/dictionary/${params.word}`
         },
         openGraph: {
-            title: `Übersetzung für '${params.word}' von Englisch nach Deutsch | German translation/meaning of '${params.word}'`,
-            description: `Here you will get the translation of the word '${params.word}' as well as an explanation of its meaning. Hopefully, you will find what you are looking for.`,
+            title: `${params.word.replaceAll("-", " ").replace(params.word[0],params.word[0].toUpperCase())} Meaning in Hindi (${params.word.replaceAll("-", " ").replace(params.word[0],params.word[0].toUpperCase())} का हिन्दी अनुवाद) | meaninginhindi.wiki`,
+            description: `Meaning of ${params.word.replaceAll("-", " ").replace(params.word[0],params.word[0].toUpperCase())} in Hindi or Translation of ${params.word.replaceAll("-", " ").replace(params.word[0],params.word[0].toUpperCase())} in Hindi is given here. Read this full page to know more about this English word ${params.word.replaceAll("-", " ").replace(params.word[0],params.word[0].toUpperCase())} in Hindi langulage.`,
             images: 'https://meaninginhindi.wiki/opengraph-image.png'
         },
     }
@@ -32,7 +32,7 @@ export async function generateMetadata(
 // dynamic metadata ends here-------------------
 
 export default async function word({ params }: any) {
-    const word1: any = await getWord(params.word)
+    const word1: any = await getWord(params.word.toLowerCase().replaceAll("%20","-"))
     // not found page my next13
     if (!word1) {
         notFound()
@@ -63,9 +63,9 @@ export default async function word({ params }: any) {
     const jsonLd = [{
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": `German translation/meaning of '${params.word}'`,
+        "name": `Hindi translation or meaning of '${params.word}'`,
         "url": `https://meaninginhindi.wiki/dictionary/${params.word}`,
-        "description": `Definition of '${params.word}' by meaninginhindi.wiki`,
+        "description": `Translation of '${params.word}' by meaninginhindi.wiki`,
         "isPartOf": {
             "@id": "https://meaninginhindi.wiki/#website"
         }
@@ -75,7 +75,7 @@ export default async function word({ params }: any) {
         "@type": "WebSite",
         "@id": "https://www.meaninginhindi.wiki/#website",
         "url": "https://www.meaninginhindi.wiki",
-        "name": "meaninginhindi.wiki Dictionary",
+        "name": "MeaninginHindi Dictionary",
         "potentialAction": {
             "@type": "SearchAction",
             "target": "https://www.meaninginhindi.wiki/dictionary/{search_term_string}?utm_campaign=sd&utm_medium=serp&utm_source=jsonld",

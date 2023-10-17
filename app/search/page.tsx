@@ -41,9 +41,9 @@ export default async function Search({
   return (
     <div className='w-full md:w-3/4 mx-auto h-auto rounded-lg px-10 text-violet-700 flex flex-col gap-2'>
 
-      <h2 className="text-slate-600 md:text-3xl text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-slate-800 text-center pt-6">English to German Word Meaning</h2>
+      <h2 className="text-slate-600 md:text-3xl text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-slate-800 text-center pt-6">English to Hindi Word Meaning</h2>
 
-      <h3 className="md:text-2xl font-semibold text-slate-800 text-center">Better Word Explanation of English Words in German language.</h3>
+      <h3 className="md:text-2xl font-semibold text-slate-800 text-center">Better Word Explanation of English Words in Hindi language.</h3>
 
       <h4 className="text-lg font-semibold text-slate-800 text-center mt-9">Search Result for &apos;{query}&apos;.</h4>
 

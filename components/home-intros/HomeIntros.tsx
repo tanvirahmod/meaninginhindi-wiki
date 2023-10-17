@@ -13,12 +13,12 @@ export default function HomeIntros() {
     return (
         <div className="w-full md:w-2/4 mx-auto h-auto p-8 px-10 flex justify-center flex-col items-center gap-4">
 
-            <h2 className="text-slate-600 md:text-3xl text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-slate-800">Word Meaning Online</h2>
+            <h2 className="text-slate-600 md:text-3xl text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-slate-800">MeaninginHindi.wiki</h2>
 
-            <h3 className="md:text-2xl font-semibold text-slate-800 text-center">Not Only a Dictionary, We Explain Words Better.</h3>
+            <h3 className="md:text-2xl font-semibold text-slate-800 text-center">A Complate English-to-Hindi Dictionary</h3>
 
-            <p className="text-slate-600 text-center">Welcome to our word exploration website! Here, we&apos;re all about digging deep into words to help you really understand what they mean. We&apos;re not just giving you simple definitions – we&apos;re like word detectives, uncovering all the interesting details about each word. It&apos;s like peeling an onion to see all the layers! And to make things even clearer, we&apos;ve got lots of examples to show you how each word is used in real life. </p>
-            <p className="text-slate-600 text-center">Whether you&apos;re someone who loves playing with words or you&apos;re trying to learn a new language, our website is here to help.</p>
+            <p className="text-slate-600 text-center">Welcome to our MeaninginHindi English to Hindi online dictionary Website! Here, We&apos;re here to help you understand English words better in Hindi Language. We are not just giving you the simple translation of a word in Hindi, we also provide other information such as parts of speech, pronounciation, phonetic of UK and US, similler words with meaning, synonyms, antonyms, hyponyms, hypernyms and how to use the word in a sentence. It&apos;s like peeling an onion to see all the layers! And to make things even clearer, we&apos;ve got lots of examples to show you how each word is used in real life. </p>
+            <p className="text-slate-600 text-center">Whether you&apos;re someone who loves playing with words or you&apos;re trying to learn Hindi language, our website is here to help.</p>
             <p className="text-slate-600 text-center">Let&apos;s have fun exploring the amazing world of words together!</p>
 
             <h3 className="text-slate-600 md:text-3xl text-2xl mt-14 font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-violet-600">What we Provide.</h3>
@@ -34,8 +34,8 @@ export default function HomeIntros() {
                         </svg>
                     </div>
                     <div className='w-2/3 bg-slate-100 flex justify-center flex-col items-center gap-1 p-4'>
-                        <h4 className='text-slate-800 text-xl font-semibold'>Explanation</h4>
-                        <p className='text-slate-600 text-center text-sm'>One word meaning is hard to understand sometimes so we explained it better.</p>
+                        <h4 className='text-slate-800 text-xl font-semibold'>Information</h4>
+                        <p className='text-slate-600 text-center text-sm'>We provide more information as possible about a word with Hindi translation.</p>
                     </div>
                 </div>
 
@@ -50,7 +50,7 @@ export default function HomeIntros() {
                     </div>
                     <div className='w-2/3 bg-slate-100 flex justify-center flex-col items-center gap-1 p-4'>
                         <h4 className='text-slate-800 text-xl font-semibold'>Translation</h4>
-                        <p className='text-slate-600 text-center text-sm'>Before the explaination we provide proper translation first.</p>
+                        <p className='text-slate-600 text-center text-sm'>Our goal is to give you the accurate translation of a English word in Hindi.</p>
                     </div>
                 </div>
 
