@@ -17,7 +17,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
 
     return {
-        title: `${params.word.replaceAll("-", " ").replace(params.word[0],params.word[0].toUpperCase())} Meaning in Hindi (${params.word.replaceAll("-", " ").replace(params.word[0],params.word[0].toUpperCase())} का हिन्दी अनुवाद) | meaninginhindi.wiki`,
+        title: `${params.word.replaceAll("-", " ").replace(params.word[0],params.word[0].toUpperCase())} Meaning in Hindi, ${params.word.replaceAll("-", " ").replace(params.word[0],params.word[0].toUpperCase())} Translation in Hindi | meaninginhindi.wiki`,
         description: `Meaning of ${params.word.replaceAll("-", " ").replace(params.word[0],params.word[0].toUpperCase())} in Hindi or Translation of ${params.word.replaceAll("-", " ").replace(params.word[0],params.word[0].toUpperCase())} in Hindi is given here. Read this full page to know more about this English word ${params.word.replaceAll("-", " ").replace(params.word[0],params.word[0].toUpperCase())} in Hindi langulage.`,
         alternates: {
             canonical: `https://meaninginhindi.wiki/dictionary/${params.word}`
@@ -100,7 +100,7 @@ export default async function word({ params }: any) {
     return (
         <main className='mx-auto h-auto rounded-lg p-6 px-10 prose prose-slate'>
 
-            <Breadcrumbs place="/dictionary" name="Dictionary" title={`Hindi translation of ${word1.word.replaceAll("-", " ")}`} />
+            <Breadcrumbs place="/dictionary" name="Dictionary" title={`${word1.word.replace(params.word[0],params.word[0].toUpperCase()).replaceAll("-", " ")} Meaning in Hindi`} />
 
             <h1 className='text-2xl mb-0 lg:text-3xl text-slate-800 text-center'><span className='capitalize'>&apos;{word1.word.replaceAll("-", " ")}&apos;</span> Meaning in Hindi (<span className='capitalize'>&apos;{word1.word.replaceAll("-", " ")}&apos;</span> का हिन्दी अनुवाद)</h1>
             <div className='shadow-lg ring-1 ring-slate-200 p-2 mt-3 rounded-md'>

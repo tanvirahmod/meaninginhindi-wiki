@@ -8,7 +8,7 @@ export default function SearchBar(props: { place: string, isSingleWordSearch: bo
 
     const onSearch = (e: React.FormEvent) => {
         e.preventDefault();
-        const encodedSearchQuery = encodeURI(searchQuery.replaceAll(" ","-").toLowerCase());
+        const encodedSearchQuery = encodeURI(searchQuery.trim().replaceAll(" ","-").toLowerCase());
         const searchType = props.isSingleWordSearch ? `/${encodedSearchQuery}` : `?q=${encodedSearchQuery}`
         router.push(`${props.place}${searchType}`);
     }
