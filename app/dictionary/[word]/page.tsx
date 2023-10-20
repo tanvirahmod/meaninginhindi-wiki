@@ -56,7 +56,7 @@ export default async function word({ params }: any) {
     // marge array all others form words 
     const allForm = eval(word1?.formNoun)?.concat(eval(word1?.formAdjective), eval(word1?.formVerb), eval(word1?.formAdverb));
     const all_forms: any = await getArray(allForm)
-    console.log(all_forms)
+    // console.log(all_forms)
 
 
     // generate jsonLD for SEO
@@ -98,7 +98,7 @@ export default async function word({ params }: any) {
     ]
 
     return (
-        <main className='mx-auto h-auto rounded-lg p-6 px-10 prose prose-slate'>
+        <main className='mx-auto h-auto rounded-lg p-6 px-4 prose prose-slate'>
 
             <Breadcrumbs place="/dictionary" name="Dictionary" title={`${word1.word.replace(params.word[0],params.word[0].toUpperCase()).replaceAll("-", " ")} Meaning in Hindi`} />
 
