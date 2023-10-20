@@ -25,7 +25,7 @@ export default function NavBar() {
             </button>
 
             {IsOpen && (
-                <ul className='absolute top-20 bg-slate-100 ring-1 ring-slate-200 p-6 flex flex-col gap-6 shadow-lg right-0 text-slate-600 font-bold w-64 rounded-lg'>
+                <ul className='absolute top-20 bg-slate-100 ring-1 ring-slate-200 p-6 flex flex-col gap-6 shadow-lg right-0 text-slate-600 font-bold w-64 rounded-lg z-10'>
                     <li onClick={() => setIsOpen((prev: boolean) => !prev)} ><Link className='hover:bg-white p-4 rounded-lg active:text-slate-950' href={"/"}>Home</Link></li>
                     <li onClick={() => setIsOpen((prev: boolean) => !prev)}><Link className='hover:bg-white p-4 rounded-lg active:text-slate-950' href={"/dictionary"}>Hindi Meaning</Link></li>
 
