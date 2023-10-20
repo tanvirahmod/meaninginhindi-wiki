@@ -8,13 +8,27 @@ export default function SearchBar(props: { place: string, isSingleWordSearch: bo
 
     const onSearch = (e: React.FormEvent) => {
         e.preventDefault();
-        const encodedSearchQuery = encodeURI(searchQuery.trim().replaceAll(" ","-").toLowerCase());
+        const encodedSearchQuery = encodeURI(searchQuery.trim().replaceAll(" ", "-").toLowerCase());
         const searchType = props.isSingleWordSearch ? `/${encodedSearchQuery}` : `?q=${encodedSearchQuery}`
         router.push(`${props.place}${searchType}`);
     }
 
+    // code for sticky searchbar
+    // const [searchIsVisible, setSearchIsVisible] = useState<boolean>()
+    // console.log("Search is Visible: ",searchIsVisible)
+    // const myRef:any = useRef();
+    // // add "ref={myRef}" to the element to observe
+    // useEffect(() => {
+    //     // console.log('myRef', myRef.current)
+    //     const observer = new IntersectionObserver((entries) => {
+    //         const entry = entries[0]
+    //         setSearchIsVisible(entry.isIntersecting)
+    //     })
+    //     observer.observe(myRef.current)
+    // }, [])
+
     return (
-        <form onSubmit={onSearch} className='w-full md:w-3/4 mx-auto h-auto rounded-lg p-4 px-10 flex justify-center'>
+        <form onSubmit={onSearch} className='bg-white w-full md:w-3/4 mx-auto h-auto rounded-lg p-4 px-10 flex justify-center sticky top-0'>
             <input onChange={(e) => setSearchQuery(e.target.value)} value={searchQuery} className='bg-slate-100 text-slate-600 ring-1 ring-slate-200 focus:ring-1 focus:ring-violet-600 sm:w-2/4 w-3/4 rounded-r-none rounded-md p-3 outline-none' type='search' name='search' placeholder='Search Word'></input>
             <button className='ring-1 ring-violet-600 active:ring rounded-l-none p-3 bg-violet-600 rounded-md text-white' name='search' type='submit' aria-label="search">
                 <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
