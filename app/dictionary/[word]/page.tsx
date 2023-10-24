@@ -233,7 +233,7 @@ export default async function word({ params }: any) {
             )}
 
 
-            {word1.hypernyms && (
+            {/* {word1.hypernyms && (
                 <>
                     <h3 className=''>Hypernyms of <span className='capitalize'>&apos;{word1.word.replaceAll("-", " ")}&apos;</span></h3>
                     <div className='shadow-lg ring-1 ring-slate-200 p-2 pl-4 mt-3 rounded-md'>
@@ -250,7 +250,7 @@ export default async function word({ params }: any) {
                         <p className='m-0 pl-2'>{word1.hyponyms.replaceAll("-", " ").replaceAll(";", ", ")}</p>
                     </div>
                 </>
-            )}
+            )} */}
 
 
     {word1.examples && <h3>English examples for &apos;{word1.word}&apos;</h3>}
